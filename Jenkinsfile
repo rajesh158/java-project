@@ -7,5 +7,10 @@ pipeline {
       }
     }
   }
-  
+
+  post {
+    always {
+      archiveArtifacts: 'dist/*.jar', fingerprint: true
+    }
+  }
 }
