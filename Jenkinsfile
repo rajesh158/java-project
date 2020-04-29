@@ -27,7 +27,7 @@ pipeline {
         label 'apache'
       }
       steps{
-        sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/hrml/rectangles/all"
+        sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all"
       }
     }
     stage ('Running on Centos') {
