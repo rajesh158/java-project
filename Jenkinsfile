@@ -1,9 +1,6 @@
 pipeline {
   agent none
 
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '1'))
-  }
   stages {
     stage ('Unit Tests') {
       agent {
@@ -39,11 +36,10 @@ pipeline {
         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
       }
     }
-  }
-
-  post {
-    always {
-      archiveArtifacts  artifacts: 'dist/*.jar', fingerprint: true
+    post {
+      always {
+        archiveArtifacts  artifacts: 'dist/*.jar', fingerprint: true
+      }
     }
-  }
+  }  
 }
