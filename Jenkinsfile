@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 pipeline {
   agent none
 
@@ -54,6 +55,8 @@ pipeline {
   }
 }
 =======
+=======
+>>>>>>> 1cf3fe67de21c401c36d9706bf116ede2e1e769b
 pipeline {
   agent none
 
